@@ -1,0 +1,58 @@
+<table class="col-md-4 table table-striped">
+    <thead>
+        <tr>
+<th>ID</th>            
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email-ID</th>
+            <th>Actions</th>
+</tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employee">
+<td>{{employee.id}}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.emailId}}</td>
+            <td>
+                <button class="btn btn-primary" (click)="updateEmployeee(employee)">Update</button>
+                <button class="btn btn-danger" (click)="deleteEmployee(employee)" style="margin-left: 10px">Delete</button>
+                <button class="btn btn-info" (click)="employeeDetails(employee)" style="margin-left: 10px">Viewe</button>                
+            </td>
+<td>
+<!--<div class="col-md-4 offset-md- card text-center">
+    <div class="card-body">
+        <p class="card-text">{{employee.firstName}}</p>
+        <p class="card-text">{{employee.lastName}}</p>
+        <p class="card-text">{{employee.emailId}}</p>
+        <td>
+            <button class="btn btn-primary" (click)="updateEmployeee(employee)">Update</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+        </td>
+    </div>
+</div> -->
+<!-- <div class="row">
+    <div *ngFor="let employee of employee" class="col-sm-2 card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Employee Card</h5>
+            <p class="card-text">{{employee.firstName}} {{employee.lastName}}</p>
+            <img class="card-img-top" src="D:\Angular+Sprinboot+crud+Application\Emp_angular\src\assets\profile.png" alt="Card image cap">
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{employee.firstName}}</li>
+            <li class="list-group-item">{{employee.lastName}}</li>
+            <li class="list-group-item">{{employee.emailId}}</li>
+        </ul>
+        <div class="card-body"> 
+            <button class="btn btn-primary" (click)="updateEmployeee(employee)">Update</button>
+            <button class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+        </div>
+    </div>
+</div> -->
+
+</td>
+        </tr>
+    </tbody>
+</table>
